@@ -2,10 +2,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Javascript Dice Game</title>
+	<link rel="stylesheet" href="stylesheet.css"/>
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-	<h1>A Simple Javascript Dice Game</h1>
-	<p>Good luck!</p>
+	<header>
+		<h1>a simple javascript dice game</h1>
+		<h2>(<a href="https://github.com/PsychicCat/dice" target="new">github</a>)</h2>
+	</header>
+	<main>
+		<div class="content">
+			<section>
+				<p id="text">Choose a number 1-6, or random roll!</p>
+				<ul>
+					<li><button onclick="setNumber(1)">1</button></li>
+					<li><button onclick="setNumber(2)">2</button></li>
+					<li><button onclick="setNumber(3)">3</button></li>
+					<li><button onclick="setNumber(4)">4</button></li>
+					<li><button onclick="setNumber(5)">5</button></li>
+					<li><button onclick="setNumber(6)">6</button></li>
+					<li><button onclick="setNumber(rollDice())">Random</button></li>
+				</ul>
+			</section>
+			<article>
+				<p id="yourRoll">Your Roll:</p>
+				<p id="myRoll">My Roll:</p>
+			</article>
+			<footer>
+			<p id="result">Result: </p>
+			</footer>
+		</div>
+	</main>
 </body>
 </html>
