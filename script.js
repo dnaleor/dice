@@ -11,6 +11,7 @@ var win = function () {
 
 var wins = 0;
 var losses = 0;
+var percent = 0;
 
 // user selection of 1-6 or random number
 function setNumber (x) {
@@ -18,13 +19,14 @@ function setNumber (x) {
 	myNum = rollDice();
 	document.getElementById("myRoll").innerHTML = ("My Roll: " + myNum + ".");
 	if (x == myNum) {
-		document.getElementById("result").innerHTML = ("Result: You win!");
+		document.getElementById("result").innerHTML = ("You win!");
 		wins += 1;
 	} else {
-		document.getElementById("result").innerHTML = ("Result: Sorry, please try again.");
+		document.getElementById("result").innerHTML = ("Sorry, please try again.");
 		losses += 1;
 	}
 	document.getElementById("winloss").innerHTML = ("Wins / Losses: " + wins + " / " + losses);
+	document.getElementById("percent").innerHTML = ("Win Percentage: " + wins/gamesPlayed * 100 + "%");
 };
 
 // Counts number of games played
@@ -34,6 +36,5 @@ var counter = function () {
 	gamesPlayed += 1;
 	document.getElementById("counter").innerHTML = ("Games Played: " + gamesPlayed);
 };
-
 
 
