@@ -25,8 +25,6 @@ function setNumber (x) {
 		document.getElementById("result").innerHTML = ("Sorry, please try again.");
 		losses += 1;
 	}
-	document.getElementById("winloss").innerHTML = ("Wins / Losses: " + wins + " / " + losses);
-	document.getElementById("percent").innerHTML = ("Win Percentage: " + wins/gamesPlayed * 100 + "%");
 };
 
 // Counts number of games played
@@ -37,4 +35,7 @@ var counter = function () {
 	document.getElementById("counter").innerHTML = ("Games Played: " + gamesPlayed);
 };
 
-
+function displayStats(){
+	document.getElementById("winloss").innerHTML = ("Wins / Losses: " + wins + " / " + losses);
+	document.getElementById("percent").innerHTML = ("Win Percentage: " + wins/gamesPlayed * 100 + "%");
+};
